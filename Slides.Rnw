@@ -1,0 +1,46 @@
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+\graphicspath{ {./10-presentation-furbeck} }
+
+
+\title{So who exactly is Becca Furbeck?}
+\author{A presentation by Becca Furbeck}
+\institute{University of Nebraska-Lincoln}
+\date{2020}
+
+\begin{document}
+
+\frame{\titlepage}
+\begin{frame}
+\frametitle{About Me}
+- Born: November 17, 1995
+- Raised in Iowa, attended Iowa State, currently a Husker
+- Ph.D. Candidate in Meat Science and Muscle Biology
+- Expected Graduation: Summer 2022
+\end{frame}
+
+\begin{frame}
+\includegraphics[scale=0.5]{Pseudomonas}
+
+My favorite animal is \emph{Pseudomonas}. Okay, \emph{Pseudomonas}, is not an animal, but it is the bacteria I study, so I like it more than pretty much every animal...except maybe the ones I obtain it from which would be turkeys.
+\end{frame}
+
+\begin{frame}[fragile]
+How to spot fake bills: A scatterplot based on Top and Bottom lengths
+<<r, echo=FALSE, warning=FALSE,results=FALSE,message=FALSE, fig.height=4>>=
+library(magrittr)
+library(mclust)
+library(ggplot2)
+data(banknote, package = "mclust")
+data(banknote)
+banknote %>% ggplot(aes(x=Top, y=Bottom, color=Status))+geom_point()
+@
+\end{frame}
+
+\begin{frame}
+Link to CV
+
+For more information see \href{http://rmarkdown.rstudio.com}{my CV}.
+\end{frame}
+
+\end{document}
